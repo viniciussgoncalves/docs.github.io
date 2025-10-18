@@ -1,0 +1,49 @@
+site_name: My Documentation
+site_description: Example project documentation
+repo_url: https://github.com/my-user/my-project
+repo_name: GitHub
+
+theme:
+  name: material
+  language: en
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: pink
+  features:
+    - navigation.tabs
+    - navigation.expand
+    - search.highlight
+
+nav:
+  - Home: index.md
+  - User Guide:
+      - Installation: guide/installation.md
+      - Configuration: guide/configuration.md
+      - Examples: guide/examples.md
+  - API:
+      - Overview: api/overview.md
+      - Endpoints: api/endpoints.md
+  - About:
+      - Contributing: about/contributing.md
+      - License: about/license.md
+
+plugins:
+  - search
+  - mkdocs-awesome-pages-plugin
+  - mkdocs-git-revision-date-plugin:
+      enabled: true
+      type: date
+
+markdown_extensions:
+  - admonition
+  - codehilite:
+      guess_lang: false
+  - toc:
+      permalink: true
+  - tables
+  - footnotes
+  - def_list
+
+docs_dir: docs
+site_dir: site
